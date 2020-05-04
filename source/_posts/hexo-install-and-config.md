@@ -2,6 +2,7 @@
 title: 在GitHub上搭建Hexo个人博客
 date: 2020-05-03 10:04:45
 tags: hexo
+categories: hexo
 copyright: true
 ---
 # 概述
