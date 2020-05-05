@@ -21,7 +21,7 @@ gulp.task('minify-html', function() {
 
 // 压缩css
 gulp.task('minify-css', function() {
-    return gulp.src('./public/**/*.css')
+    return gulp.src(['./public/**/*.css','!./public/js/**/*min.css'])
         .pipe(minifycss({
             compatibility: 'ie8'
         }))
