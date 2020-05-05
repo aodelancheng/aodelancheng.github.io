@@ -17,7 +17,7 @@ copyright: true
 
 ​	在**Git**的官方[下载地址](https://git-scm.com/downloads)上，选择要安装平台的安装文件进行安装
 
-![Git官方下载地址截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-111152.png)
+![Git官方下载地址截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-111152.jpg)
 
 ​	上述图片是在Mac OS上访问网页的截图，官网一般会自动检测当前电脑的系统，如果是Windows上浏览网页右侧显示会略有不同，当然也可以在Downloads下选择特定平台的版本安装文件。
 
@@ -25,7 +25,7 @@ copyright: true
 
 ​	在**Node.js**的官方[下载地址](https://nodejs.org/en/)上，选择要安装平台的安装文件进行安装
 
-![Node.js官方下载地址截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-114433.png)
+![Node.js官方下载地址截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-114433.jpg)
 
 ​	这里我选择的是12.16.3 LTS版本进行安装。
 
@@ -62,7 +62,7 @@ $ hexo s
 
 ​	默认的本地预览服务地址为 http://localhost:4000 ，需要先确保端口4000没有被占用，以免影响访问网页。不出意外，在浏览器上可以看到如下默认网页。
 
-![Hexo博客默认主题Hello World页面](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-205440.png)
+![Hexo博客默认主题Hello World页面](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-205440.jpg)
 
 ## 修改主题
 
@@ -105,7 +105,7 @@ $ cat id_rsa.pub
 
 ​	并复制里面的内容(`ssh-rsa`开头、你输入的`邮件地址`内容结尾)，打开你的github主页，进入Settings -> SSH and GPG keys -> New SSH key：
 
-![SSH配置截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-193801.png)
+![SSH配置截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-193801.jpg)
 
 ​	将刚复制的内容粘贴到Key那里，Title按实际需要填写内容，保存后测试是否配置成功。
 
@@ -119,12 +119,12 @@ $ ssh -T git@github.com #注意地址不用改
 
 ## 创建个人主页仓库
 
-![创建Github仓库截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-202952.png)
+![创建Github仓库截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-202952.jpg)
 
 
 ​	这里需要注意的是，仓库名字格式为`xxx.github.io`，且前缀需要和Username一致，如果你的github账户名为blog，那么对应的的仓库名为blog.github.io。新建成功后，复制SSH地址。
 
-![SSH地址截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-203256.png)
+![SSH地址截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-203256.jpg)
 
 ## 绑定个人域名(可选)
 
@@ -132,11 +132,11 @@ $ ssh -T git@github.com #注意地址不用改
 
 ​	域名解析配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，所以必须先ping一下`你Username.github.io`的IP，然后到你的域名DNS设置页，将A记录指向你ping得到的IP，将CNAME指向`Username.github.io`，这样可以保证无论是否添加www都可以访问，如下所示：
 
-![域名解析设置截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-200236.png)
+![域名解析设置截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-200236.jpg)
 
 ​	此时需要到仓库下面，选择`Settings`->`options`，并下拉滚动条到**GitHub Pages**->`Custom domain`内填写上你的个人域名地址，如下所示：
 
-![GitHub Pages配置截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-200812.png)
+![GitHub Pages配置截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-200812.jpg)
 
 ​	可以开启**Enforce HTTPS**，个人页面Github会自动添加HTTPS证书，不会提示连接不安全的问题。
 
@@ -161,7 +161,7 @@ deploy:
 
 ​	此时，到blog下输入`hexo d`就会将本次有改动的代码全部提交到`master`:
 
-![hexo d命令结果截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-202546.png)
+![hexo d命令结果截图](https://alderaan.xyz/2020/05/03/hexo-install-and-config/20200503-202546.jpg)
 
 ## 上传Hexo博客源码(可选)
 
