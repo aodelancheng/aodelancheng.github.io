@@ -104,7 +104,7 @@ deploy:
 
 # Live2d
 live2d:
-  enable: true
+  enable: false
   scriptFrom: local
   pluginRootPath: live2dw/
   pluginJsPath: lib/
@@ -116,4 +116,4 @@ live2d:
     width: 150
     height: 300
   mobile:
-    show: true
+    show: false

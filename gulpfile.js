@@ -35,7 +35,7 @@ gulp.task('minify-js', function() {
 });
 // 压缩图片
 gulp.task('minify-images', function() {
-    return gulp.src(['./public/**/*.png','./public/**/*.jpg','./public/**/*.gif'])
+    return gulp.src(['./public/**/*.png','./public/**/*.gif'])
         .pipe(imagemin(
         [imagemin.gifsicle({'optimizationLevel': 3}), 
         imagemin.mozjpeg({'progressive': true}), 
@@ -51,6 +51,6 @@ gulp.task('default', [
 ]);
 */
 // gulp 4.0 适用的方式
-gulp.task('default', gulp.parallel('minify-html','minify-css','minify-js'//,'minify-images'
+gulp.task('default', gulp.parallel('minify-html','minify-css','minify-js','minify-images'
  //build the website
 ));
