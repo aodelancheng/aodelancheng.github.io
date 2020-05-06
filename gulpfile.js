@@ -36,12 +36,12 @@ gulp.task('minify-js', function() {
 // 压缩图片
 gulp.task('minify-images', function() {
     return gulp.src(['./public/**/*.png','./public/**/*.jpg','./public/**/*.gif'])
-        .pipe(imagemin({
-           optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
-           progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
-           interlaced: false, //类型：Boolean 默认：false 隔行扫描gif进行渲染
-           multipass: false, //类型：Boolean 默认：false 多次优化svg直到完全优化
-        }))
+        .pipe(imagemin(
+        [imagemin.gifsicle({'optimizationLevel': 3}), 
+        imagemin.mozjpeg({'progressive': true}), 
+        imagemin.optipng({'optimizationLevel': 7}), 
+        imagemin.svgo()],
+        {'verbose': true}))
         .pipe(gulp.dest('./public'))
 });
 // 默认任务
